@@ -139,3 +139,40 @@ body {
     font-weight: bold;
 }
 
+@media screen and (max-width: 769px) {
+
+    html {
+        overflow-y: auto;
+    }
+    
+    .auth-page {
+        flex-direction: column;
+        padding-bottom: 30px;
+    }
+
+    .auth-left {
+        height: fit-content;
+        width: 100%;
+    }
+
+    .auth-title {
+        margin: 10px auto;
+        font-size: 30px;
+    }
+
+    .auth-illustration {
+        display: none;
+    }
+
+    .auth-right {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .auth-right #title {
+        font-size: 30px;
+        align-self: center;
+    }
+
+}
