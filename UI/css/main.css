@@ -466,6 +466,141 @@ body {
     border-color: #4078c0;
 }
 
+.meetup-container {
+    width: 100%;
+    height: fit-content;
+    padding: 20px 80px;
+    display: grid;
+    box-sizing: border-box;
+}
+
+.meetup-header {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.header-details {
+    flex: 60%;
+    height: fit-content;
+    display: grid;
+}
+
+.header-details span {
+    font-size: 16px;
+    color: #666666;
+}
+
+.header-details p {
+    margin: 5px 0;
+    font-size: 30px;
+    font-weight: bold;
+    color: #303030;
+}
+
+.meetup-host {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.meetup-host img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.meetup-host span {
+    margin-left: 10px;
+}
+
+.meetup-host span a {
+    text-decoration: none;
+    color: #0077b5;
+}
+
+.meetup-host span a:hover {
+    color: #1976d2;
+}
+
+.header-actions {
+    flex: 40%;
+    display: grid;
+    height: fit-content;
+}
+
+.header-actions span {
+
+}
+
+.header-buttons {
+    width: 100%;
+    height: fit-content;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.header-buttons button {
+    padding: 7px;
+    box-sizing: border-box;
+    width: 40%;
+    color: white;
+    background: #0095ff;
+    border: none;
+    border-radius: 0.25rem;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.header-buttons button:hover {
+    background: #1976d2;
+}
+
+#cancel {
+    margin-left: 10%;
+}
+
+.header-actions hr {
+    width: 90%;
+    margin: 10px 0;
+    background: transparent;
+    height: 0;
+    border: none;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.header-socials {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-socials span {
+    margin: 0;
+    opacity: 0.8;
+}
+
+.header-socials ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0 10px;
+    padding: 0;
+}
+
+.header-socials ul li {
+    margin: 0 10px;
+}
+
+.header-socials ul li a {
+    font-size: 22px;
+    color: #666666;
+}
+
 @media screen and (max-width: 769px) {
 
     html {
