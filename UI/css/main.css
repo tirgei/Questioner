@@ -466,6 +466,212 @@ body {
     border-color: #4078c0;
 }
 
+.meetup-container {
+    width: 100%;
+    height: fit-content;
+    padding: 20px 80px;
+    display: grid;
+    box-sizing: border-box;
+}
+
+.meetup-header {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0 30px 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.header-details {
+    flex: 60%;
+    height: fit-content;
+    display: grid;
+}
+
+.header-details span {
+    font-size: 16px;
+    color: #666666;
+}
+
+.header-details p {
+    margin: 5px 0;
+    font-size: 30px;
+    font-weight: bold;
+    color: #303030;
+}
+
+.meetup-host {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.meetup-host img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.meetup-host span {
+    margin-left: 10px;
+}
+
+.meetup-host span a {
+    text-decoration: none;
+    color: #0077b5;
+}
+
+.meetup-host span a:hover {
+    color: #1976d2;
+}
+
+.header-actions {
+    flex: 40%;
+    display: grid;
+    height: fit-content;
+}
+
+.header-buttons {
+    width: 100%;
+    height: fit-content;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.header-buttons button {
+    padding: 7px;
+    box-sizing: border-box;
+    width: 40%;
+    color: white;
+    background: #0095ff;
+    border: none;
+    border-radius: 0.25rem;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.header-buttons button:hover {
+    background: #1976d2;
+}
+
+#cancel {
+    margin-left: 10%;
+}
+
+.header-actions hr {
+    width: 90%;
+    margin: 10px 0;
+    background: transparent;
+    height: 0;
+    border: none;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.header-socials {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-socials span {
+    margin: 0;
+    opacity: 0.8;
+}
+
+.header-socials ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0 10px;
+    padding: 0;
+}
+
+.header-socials ul li {
+    margin: 0 10px;
+}
+
+.header-socials ul li a {
+    font-size: 22px;
+    color: #666666;
+}
+
+.meetup-body {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    padding: 30px 0;
+    box-sizing: border-box;
+}
+
+.meetup-description {
+    flex: 60;
+    display: grid;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+#meetup-poster {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.meetup-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #444444;
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.5em;
+    color: #555555;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.meetup-extra {
+    flex: 40%;
+    height: fit-content;
+    padding-left: 30px;
+    box-sizing: border-box;
+    display: grid;
+}
+
+.extra-item {
+    display: flex;
+    flex-direction: row;
+}
+
+.extra-item i {
+    font-size: 20px;
+    color: #7c7c7c;
+}
+
+.extra-item div {
+    display: grid;
+    margin-left: 15px;
+}
+
+.extra-item div > span:first-child {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.extra-item div > span:last-child {
+    color: #555454;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.venue-item {
+    margin-top: 20px;
+}
+
 @media screen and (max-width: 769px) {
 
     html {
@@ -508,7 +714,7 @@ body {
     }
 
     .navbar-title {
-        font-size: 30px;
+        font-size: 28px;
     }
 
     .menu {
@@ -594,6 +800,91 @@ body {
 
     .footer span {
         margin-top: 10px;
+    }
+
+    .meetup-container {
+        padding: 10px;
+    }
+
+    .meetup-header {
+        flex-direction: column;
+        padding: 0;
+        padding-bottom: 15px;
+    }
+
+    .header-details {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .header-details span {
+        font-size: 13px;
+    }
+
+    .header-details p {
+        font-size: 22px;
+    }
+
+    .meetup-host img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .meetup-host span {
+        margin-left: 5px;
+    }
+
+    .header-actions {
+        width: 100%;
+        height: fit-content;
+        margin-top: 15px;
+    }
+
+    .header-actions > span:first-child {
+        font-size: 15px;
+    }
+    
+    .header-buttons {
+        justify-content: space-around;
+    }
+
+    .header-buttons button {
+        width: 45%;
+        padding: 5px;
+    }
+
+    #cancel {
+        margin-left: 0;
+    }
+
+    .meetup-body {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .meetup-description {
+        width: 100%;
+        height: fit-content;
+        padding-right: 0;
+    }
+
+    #meetup-poster {
+        margin-bottom: 10px;
+    }
+
+    .meetup-title {
+        font-size: 18px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .meetup-extra {
+        width: 100%;
+        padding-left: 10px;
+        height: fit-content;
+        margin-top: 15px;
     }
 
 }
