@@ -729,6 +729,10 @@ body {
     margin-left: 30px;
 }
 
+.question-comment {
+    margin-left: 30px;
+}
+
 .question-box {
     margin-top: 25px;
     width: 100%;
@@ -771,6 +775,7 @@ body {
 .answer {
     display: grid;
     margin-top: 15px;
+    width: 100%;
 }
 
 .answers > .answer:first-child {
