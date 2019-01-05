@@ -490,13 +490,9 @@ body {
     display: grid;
 }
 
-.header-details span {
-    font-size: 16px;
-    color: #666666;
-}
 
 .header-details p {
-    margin: 5px 0;
+    margin: 0;
     font-size: 30px;
     font-weight: bold;
     color: #303030;
@@ -559,43 +555,6 @@ body {
 
 #cancel {
     margin-left: 10%;
-}
-
-.header-actions hr {
-    width: 90%;
-    margin: 10px 0;
-    background: transparent;
-    height: 0;
-    border: none;
-    border-bottom: 1px solid #e6e6e6;
-}
-
-.header-socials {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.header-socials span {
-    margin: 0;
-    opacity: 0.8;
-}
-
-.header-socials ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    margin: 0 10px;
-    padding: 0;
-}
-
-.header-socials ul li {
-    margin: 0 10px;
-}
-
-.header-socials ul li a {
-    font-size: 22px;
-    color: #666666;
 }
 
 .meetup-body {
@@ -670,6 +629,68 @@ body {
 
 .venue-item {
     margin-top: 20px;
+}
+
+.meetup-questions {
+    width: 60%;
+    height: fit-content;
+    padding-right: 10px;
+    box-sizing: border-box;
+    display: grid;
+}
+
+.meetup-questions hr {
+    width: 100%;
+    margin: 15px 0;
+    background: transparent;
+    height: 0;
+    border: none;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.questions {
+    display: grid;
+    width: 100%;
+    height: fit-content;
+}
+
+.question {
+    display: grid;
+    width: 100%;
+    height: fit-content;
+    margin-top: 20px;
+}
+
+.question-poster {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.question-poster img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.poster-details {
+    display: grid;
+    margin-left: 10px;
+}
+
+.poster-name {
+    font-size: 15px;
+}
+
+.poster-time {
+    font-size: 12px;
+    color: #666666;
+}
+
+.question-content {
+    line-height: 1.5em;
+    color: #555555;
+    font-size: 16px;
 }
 
 @media screen and (max-width: 769px) {
@@ -817,10 +838,6 @@ body {
         height: fit-content;
     }
 
-    .header-details span {
-        font-size: 13px;
-    }
-
     .header-details p {
         font-size: 22px;
     }
@@ -868,6 +885,10 @@ body {
         padding-right: 0;
     }
 
+    .description {
+        margin-top: 0;
+    }
+
     #meetup-poster {
         margin-bottom: 10px;
     }
@@ -885,6 +906,28 @@ body {
         padding-left: 10px;
         height: fit-content;
         margin-top: 15px;
+    }
+
+    .meetup-questions {
+        width: 100%;
+        padding-right: 0;
+        margin-top: 50px;
+    }
+
+    .poster-name {
+        font-size: 15px;
+    }
+
+    .poster-time {
+        font-size: 12px;
+    }
+
+    .questions > .question:first-child {
+        margin-top: 0;
+    }
+
+    .question-content {
+        font-size: 15px;
     }
 
 }
