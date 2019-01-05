@@ -479,8 +479,9 @@ body {
     height: fit-content;
     display: flex;
     flex-direction: row;
-    padding: 10px 0;
+    padding: 10px 0 30px 0;
     box-sizing: border-box;
+    border-bottom: 1px solid #e9e9e9;
 }
 
 .header-details {
@@ -530,10 +531,6 @@ body {
     flex: 40%;
     display: grid;
     height: fit-content;
-}
-
-.header-actions span {
-
 }
 
 .header-buttons {
@@ -601,6 +598,80 @@ body {
     color: #666666;
 }
 
+.meetup-body {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    padding: 30px 0;
+    box-sizing: border-box;
+}
+
+.meetup-description {
+    flex: 60;
+    display: grid;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+#meetup-poster {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.meetup-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #444444;
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.5em;
+    color: #555555;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.meetup-extra {
+    flex: 40%;
+    height: fit-content;
+    padding-left: 30px;
+    box-sizing: border-box;
+    display: grid;
+}
+
+.extra-item {
+    display: flex;
+    flex-direction: row;
+}
+
+.extra-item i {
+    font-size: 20px;
+    color: #7c7c7c;
+}
+
+.extra-item div {
+    display: grid;
+    margin-left: 15px;
+}
+
+.extra-item div > span:first-child {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.extra-item div > span:last-child {
+    color: #555454;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.venue-item {
+    margin-top: 20px;
+}
+
 @media screen and (max-width: 769px) {
 
     html {
@@ -643,7 +714,7 @@ body {
     }
 
     .navbar-title {
-        font-size: 30px;
+        font-size: 28px;
     }
 
     .menu {
