@@ -490,13 +490,9 @@ body {
     display: grid;
 }
 
-.header-details span {
-    font-size: 16px;
-    color: #666666;
-}
 
 .header-details p {
-    margin: 5px 0;
+    margin: 0;
     font-size: 30px;
     font-weight: bold;
     color: #303030;
@@ -559,43 +555,6 @@ body {
 
 #cancel {
     margin-left: 10%;
-}
-
-.header-actions hr {
-    width: 90%;
-    margin: 10px 0;
-    background: transparent;
-    height: 0;
-    border: none;
-    border-bottom: 1px solid #e6e6e6;
-}
-
-.header-socials {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.header-socials span {
-    margin: 0;
-    opacity: 0.8;
-}
-
-.header-socials ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    margin: 0 10px;
-    padding: 0;
-}
-
-.header-socials ul li {
-    margin: 0 10px;
-}
-
-.header-socials ul li a {
-    font-size: 22px;
-    color: #666666;
 }
 
 .meetup-body {
@@ -815,10 +774,6 @@ body {
     .header-details {
         width: 100%;
         height: fit-content;
-    }
-
-    .header-details span {
-        font-size: 13px;
     }
 
     .header-details p {
