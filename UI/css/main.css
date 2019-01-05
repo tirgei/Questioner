@@ -758,6 +758,25 @@ body {
     background-color: #0077b5;
 }
 
+.answers {
+    width: 90%;
+    height: fit-content;
+    display: grid;
+    margin-left: auto;
+    padding-left: 20px;
+    border-left: 2px solid #dbdbdb;
+    margin-top: 25px;
+}
+
+.answer {
+    display: grid;
+    margin-top: 15px;
+}
+
+.answers > .answer:first-child {
+    margin-top: 0;
+}
+
 @media screen and (max-width: 769px) {
 
     html {
