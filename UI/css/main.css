@@ -908,6 +908,26 @@ body {
         margin-top: 15px;
     }
 
-    
+    .meetup-questions {
+        width: 100%;
+        padding-right: 0;
+        margin-top: 50px;
+    }
+
+    .poster-name {
+        font-size: 15px;
+    }
+
+    .poster-time {
+        font-size: 12px;
+    }
+
+    .questions > .question:first-child {
+        margin-top: 0;
+    }
+
+    .question-content {
+        font-size: 15px;
+    }
 
 }
