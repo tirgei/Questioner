@@ -802,4 +802,89 @@ body {
         margin-top: 10px;
     }
 
+    .meetup-container {
+        padding: 10px;
+    }
+
+    .meetup-header {
+        flex-direction: column;
+        padding: 0;
+        padding-bottom: 15px;
+    }
+
+    .header-details {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .header-details span {
+        font-size: 13px;
+    }
+
+    .header-details p {
+        font-size: 22px;
+    }
+
+    .meetup-host img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .meetup-host span {
+        margin-left: 5px;
+    }
+
+    .header-actions {
+        width: 100%;
+        height: fit-content;
+        margin-top: 15px;
+    }
+
+    .header-actions > span:first-child {
+        font-size: 15px;
+    }
+    
+    .header-buttons {
+        justify-content: space-around;
+    }
+
+    .header-buttons button {
+        width: 45%;
+        padding: 5px;
+    }
+
+    #cancel {
+        margin-left: 0;
+    }
+
+    .meetup-body {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .meetup-description {
+        width: 100%;
+        height: fit-content;
+        padding-right: 0;
+    }
+
+    #meetup-poster {
+        margin-bottom: 10px;
+    }
+
+    .meetup-title {
+        font-size: 18px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .meetup-extra {
+        width: 100%;
+        padding-left: 10px;
+        height: fit-content;
+        margin-top: 15px;
+    }
+
 }
