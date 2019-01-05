@@ -996,6 +996,13 @@ body {
         font-size: 15px;
     }
 
-    
+    .question-box {
+        margin-top: 10px;
+    }
+
+    #post-question {
+        width: 100%;
+        margin-bottom: 30px;
+    }
 
 }
