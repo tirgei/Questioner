@@ -502,4 +502,98 @@ body {
         align-self: center;
     }
 
+    .navbar {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar-title {
+        font-size: 30px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column-reverse;
+        height: fit-content;
+    }
+
+    .header-right {
+        width: 100%;
+        height: fit-content;
+        display: none;
+    }
+
+    .header-right img {
+        width: 100%;
+    }
+
+    .header-left {
+        width: 100%;
+        flex: 1;
+        padding: 15px;
+        margin: 0;
+        height: fit-content;
+    }
+    
+    .browsing-location {
+        display: none;
+    }
+
+    .popular-meetups {
+        padding: 15px;
+    }
+
+    .section-header {
+        padding: 0 10px;
+    }
+
+    .section-header span {
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .section-header a {
+        font-size: 14px;
+        margin-right: 0;
+    }
+
+    .meetups {
+        flex-direction: column;
+        margin-top: 10px;   
+        padding: 0;  
+    }
+    
+    .meetup {
+        width: 100%;
+    }
+
+    .meetups-categories {
+        margin-top: 0;   
+        padding: 0; 
+    }
+    
+    .category {
+        width: calc(1/2*100% - (1 - 1/2)*10px);
+    }
+
+    .category img {
+        height: 100px;
+    }
+
+    .category span {
+        font-size: 14px;
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+    }
+
+    .footer span {
+        margin-top: 10px;
+    }
+
 }
