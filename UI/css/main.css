@@ -361,7 +361,7 @@ body {
 .meetups-categories {
     height: fit-content;
     width: 100%;
-    padding: 0 50px;
+    padding: 0 50px 80px 50px;
     box-sizing: border-box
 }
 
@@ -398,8 +398,72 @@ body {
     margin-top: 10px;
 }
 
-.index-footer {
-    height: 80px;
+.footer {
+    height: fit-content;
+    padding: 20px;
+    background: #303030;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.footer span {
+    color: white;
+    flex: 1;
+}
+
+.footer span a {
+    text-decoration: none;
+    color: #0095ff;
+}
+
+.footer-socials {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.footer-socials li {
+    color: white;
+    margin: 0 15px;
+}
+
+.footer-socials li a {
+    font-size: 25px;
+    color: white;
+}
+
+.facebook:hover {
+    color: #3B5998;
+    border-color: #3B5998;
+}
+
+.quora:hover {
+    color: #a82400;
+    border-color: #a82400;
+}
+
+.linkedin:hover {
+    color: #0077b5;
+    border-color: #0077b5;
+}
+
+.twitter:hover {
+    color: #1da1f2;
+    border-color: #1da1f2;
+}
+
+.instagram:hover {
+    color: #c13584;
+    border-color: #c13584;
+}
+
+.github:hover {
+    color: #4078c0;
+    border-color: #4078c0;
 }
 
 @media screen and (max-width: 769px) {
