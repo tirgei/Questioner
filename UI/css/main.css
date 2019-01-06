@@ -890,6 +890,35 @@ body {
     color: white;
 }
 
+.profile-card hr {
+    width: 80%;
+    margin: 15px auto;
+    background: transparent;
+    height: 0;
+    border: none;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.numbers {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px auto;
+}
+
+.numbers i {
+    font-size: 20px;
+    color: #555555;
+    width: 20px;
+    height: fit-content;
+}
+
+.numbers span {
+    font-size: 15px;
+    color: #444444;
+    margin-left: 10px;
+}
+
 @media screen and (max-width: 769px) {
 
     html {
