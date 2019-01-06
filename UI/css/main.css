@@ -1199,4 +1199,14 @@ body {
     .answers #post-question {
         margin-bottom: 0;
     }
+
+    .profile-container {
+        padding: 10px;
+    }
+
+    .profile-card {
+        width: 100%;
+        margin: 0 auto;
+        padding: 15px 10px;
+    }
 }
