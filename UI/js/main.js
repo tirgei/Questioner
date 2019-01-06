@@ -5,3 +5,7 @@ function viewMeetup() {
 function meetups() {
     window.location = 'meetups.html';
 }
+
+function createMeetup() {
+    window.location = 'create-meetup.html';
+}
