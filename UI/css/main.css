@@ -1476,5 +1476,46 @@ body {
         align-items: flex-start;
     }
 
-    
+    .create-meetup-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .create-meetup-container #main-title  {
+        font-size: 25px;
+        margin: 20px auto;
+    }
+
+    .create-meetup-container form {
+        padding: 10px;
+    }
+
+    .create-meetup-container form #subtitle {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    .create-meetup-container form input:not(.date-input),
+    .create-meetup-container form textarea {
+        font-size: 15px;
+    }
+
+    .create-meetup-date {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .create-meetup-date .date {
+        width: 100%;
+    }
+
+    #create-meetup-btn {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .add-event-button {
+        right: 20px;
+        bottom: 30px;
+    }
 }
