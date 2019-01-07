@@ -1567,6 +1567,17 @@ body {
         bottom: 30px;
     }
 
+    .add-event-button:hover {
+        width: 60px;
+        height: 60px;
+        right: 20px;
+        bottom: 30px;
+    }
+    
+    .add-event-button:hover i {
+        font-size: 25px;
+    }
+
     .dashboard-container {
         width: 100%;
         padding: 10px 15px;
