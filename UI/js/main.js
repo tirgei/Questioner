@@ -9,3 +9,7 @@ function meetups() {
 function createMeetup() {
     window.location = 'create-meetup.html';
 }
+
+function deleteMeetup() {
+    alert('Meetup deleted!')
+}
