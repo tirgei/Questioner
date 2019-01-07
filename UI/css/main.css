@@ -1567,5 +1567,20 @@ body {
         bottom: 30px;
     }
 
+    .dashboard-container {
+        width: 100%;
+        padding: 10px 15px;
+    }
+
+    .dashboard-container #main-title  {
+        font-size: 25px;
+        margin: 20px auto;
+    }
+
+    .dashboard-container .meetups .meetup {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
     
 }
