@@ -120,6 +120,7 @@ body {
     border: none;
     border-radius: 0.25rem;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .auth-form button:hover {
