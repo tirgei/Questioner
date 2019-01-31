@@ -13,6 +13,9 @@ const SIGNUP_URL = `${BASE_URL}/auth/signup`;
  * Function to register a new user
  */
 function register() {
+    loader = document.getElementById('signup-loader');
+    loader.style.display = 'block';
+
     fetch(SIGNUP_URL, {
         method: 'POST',
         headers: {
@@ -29,6 +32,8 @@ function register() {
     })
     .then(res => res.json())
     .then((data) => {
+        loader.style.display = 'none';
+
         if (data.status === 422) {
             window.alert('Invalid data provided');
         } else if (data.status === 201) {
@@ -38,6 +43,8 @@ function register() {
         }
     })
     .catch((error) => {
+        loader.style.display = 'none';
+
         console.log(`Error: ${error}`);
     });
 }
