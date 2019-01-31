@@ -81,6 +81,7 @@ body {
     height: fit-content;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .auth-form {
@@ -140,6 +141,27 @@ body {
     color: #0095ff;
     font-weight: bold;
 }
+
+.loader-container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    margin: 0;
+    display: none;
+    z-index: 99;
+}
+
+.loader {
+    border: none; 
+    width: 350px;
+    height: 350px;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    position: absolute;
+    animation: spin 2s linear infinite;
+  }
 
 .navbar {
     width: 100%;
