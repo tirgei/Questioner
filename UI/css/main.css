@@ -161,7 +161,12 @@ body {
     padding: 0;
     position: absolute;
     animation: spin 2s linear infinite;
-  }
+}
+
+#login-loader .loader {
+    height: 150px;
+    width: 150px;
+}  
 
 .navbar {
     width: 100%;
