@@ -377,9 +377,30 @@ body {
     margin-right: 20px;
 }
 
+.meetups-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.meetups-empty img {
+    margin: 0;
+    padding: 0;
+}
+
+.meetups-empty span {
+    font-weight: bold;
+    font-size: 20px;
+    color: #7c7c7c;
+    padding: 0;
+    margin: 0;
+}
+
 .meetups {
     width: 100%;
-    display: grid;
+    display: none;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 25px;
     margin-top: 20px;
