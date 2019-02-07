@@ -9,6 +9,8 @@
 const BASE_URL = 'http://questioner-server.herokuapp.com/api/v2';
 const SIGNUP_URL = `${BASE_URL}/auth/signup`;
 const LOGIN_URL = `${BASE_URL}/auth/login`;
+const LOGOUT_URL = `${BASE_URL}/auth/logout`;
+
 
 /**
  * Function to check if user is logged in
@@ -100,6 +102,37 @@ function login() {
     });
 }
 
+/**
+ * Function to logout a user
+ */
+function logout() {
+    const token = localStorage.getItem('token');
+    console.log(`Token: ${token}`);
+
+    fetch(LOGOUT_URL, {
+        method: 'POST',
+        headers: {
+            Authorization: `Bearer ${token}`,
+        },
+    })
+    .then(res => res.json())
+    .then((data) => {
+        console.log(`Token: ${token}, Data: ${JSON.stringify(data)}`);
+
+        if (data.status === 200) {
+            localStorage.setItem('loggedIn', false);
+            localStorage.removeItem('token');
+
+            window.location.replace('login.html');
+        } else {
+            window.alert(data.message);
+        }
+    })
+    .catch((error) => {
+        console.log(`Error: ${error}`);
+    });
+}
+
 function viewMeetup() {
     window.location = 'meetup.html';
 }
@@ -115,3 +148,13 @@ function createMeetup() {
 function deleteMeetup() {
     alert('Meetup deleted!');
 }
+
+document.addEventListener('readystatechange', (event) => {
+    if (event.target.readyState === 'complete') {
+        // Buttons
+        const logoutBtn = document.getElementById('logout');
+
+        // Register event listeners
+        logoutBtn.addEventListener('click', logout);
+    }
+});
