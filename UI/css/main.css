@@ -270,6 +270,7 @@ body {
 
 .navbar-drop a:hover {
     background-color: #ddd;
+    cursor: pointer;
 }
 
 .dropdown:hover .navbar-drop {
