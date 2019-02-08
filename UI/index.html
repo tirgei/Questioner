@@ -75,12 +75,12 @@
                 <a href="meetups.html">See all</a>
             </div>
 
-            <div class="meetups-empty">
+            <div class="meetups-empty" id="upcoming-meetups-empty">
                 <img src="images/not-found.png" alt="No meetups found">
                 <span>No upcoming meetups found</span>
             </div>
 
-            <div class="meetups">
+            <div class="meetups" id="upcoming-meetups-list">
 
             </div>
 
@@ -166,6 +166,10 @@
             </div>
 
         </div>
+
+        <script>
+            fetchUpcomingMeetups()
+        </script>
         
     </body>
 
