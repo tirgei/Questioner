@@ -119,8 +119,6 @@ function logout() {
     })
     .then(res => res.json())
     .then((data) => {
-        console.log(`Token: ${token}, Data: ${JSON.stringify(data)}`);
-
         if (data.status === 200) {
             localStorage.setItem('loggedIn', false);
             localStorage.removeItem('token');
