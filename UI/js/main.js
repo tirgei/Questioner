@@ -255,6 +255,61 @@ function fetchAllMeetups() {
     });
 }
 
+/**
+ * Function to fetch meetups list for dashboard
+ */
+function fetchDashboard() {
+    meetupsList = document.getElementById('dash-meetups-list');
+    emptyState = document.getElementById('dash-meetups-empty');
+
+    fetch(ALL_MEETUPS_URL, {
+        method: 'GET',
+    })
+    .then(res => res.json())
+    .then((data) => {
+        if (data.status === 200) {
+            const meetups = data.data;
+
+            if (meetups.length > 0) {
+                emptyState.style.display = 'none';
+                meetupsList.style.display = 'grid';
+
+                meetups.forEach((meetup) => {
+                    const newMeetup = document.createElement('div');
+                    newMeetup.classList.add('meetup');
+                    newMeetup.id = meetup.id;
+                    newMeetup.addEventListener('click', () => { viewMeetup(meetup.id); });
+
+                    const details = `
+                        <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F52898717%2F21809261606%2F1%2Foriginal.jpg?w=800&auto=compress&rect=0%2C19%2C1280%2C640&s=337936a5d54b58a232e00f63a3f643fc" alt="sd" onclick="viewMeetup()">
+
+                        <div class="meetup-info">
+                            <div class="details">
+                                <p class="details-title" onclick="viewMeetup()">${meetup.topic}</p>
+
+                                <span class="details-date">${meetup.happening_on}</span>
+
+                                <span class="details-venue">${meetup.location}</span>
+                            </div>
+
+                            <i class="fas fa-trash-alt delete-meetup" onclick="deleteMeetup(this.parentNode.parentElement.id)"></i>
+                        </div>
+                    `;
+
+                    newMeetup.innerHTML = details;
+                    meetupsList.appendChild(newMeetup);
+                });
+            } else {
+                meetupsList.style.display = 'none';
+                emptyState.style.display = 'flex';
+            }
+        }
+    })
+    .catch((error) => {
+        console.log(`Error fetching upcoming meetups: ${error}`);
+    });
+}
+
 function viewMeetup(id) {
     console.log(`Meetup: ${id}`);
 }
@@ -267,8 +322,8 @@ function createMeetup() {
     window.location = 'create-meetup.html';
 }
 
-function deleteMeetup() {
-    alert('Meetup deleted!');
+function deleteMeetup(id) {
+    console.log(`Meetup deleted! ${id}`);
 }
 
 /**
