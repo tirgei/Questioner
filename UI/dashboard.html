@@ -48,114 +48,24 @@
         <div class="dashboard-container">
             <span id="main-title">Manage Meetups</span>
 
-            <div class="meetups">
-                <div class="meetup" id="meetup">
-                    <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F52898717%2F21809261606%2F1%2Foriginal.jpg?w=800&auto=compress&rect=0%2C19%2C1280%2C640&s=337936a5d54b58a232e00f63a3f643fc" alt="sd" onclick="viewMeetup()">
+            <div class="meetups-empty" id="dash-meetups-empty">
+                <img src="images/not-found.png" alt="No meetups found">
+                <span>No meetups found</span>
+            </div>
 
-                    <div class="meetup-info">
-                        <div class="details">
-                            <p class="details-title" onclick="viewMeetup()">Flask: Python Reimagined</p>
-
-                            <span class="details-date">Mon 7th Jan, 5:00PM</span>
-
-                            <span class="details-venue">Andela HQ, Roysambu, Nairobi</span>
-                        </div>
-
-                        <i class="fas fa-trash-alt delete-meetup" onclick="deleteMeetup()"></i>
-                    </div>
-                </div>
-
-                <div class="meetup" id="meetup">
-                    <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F54244772%2F286257373507%2F1%2Foriginal.20181221-143829?w=800&auto=compress&rect=0%2C0%2C1010%2C505&s=708ed46f939e94727b5254fc3c377bb4" alt="sd"  onclick="viewMeetup()">
-
-                    <div class="meetup-info">
-
-                        <div class="details">
-                            <p class="details-title" onclick="viewMeetup()">Kenya Skills Show</p>
-
-                            <span class="details-date">Sat 12th Jan, 2:00PM</span>
-
-                            <span class="details-venue">Kasarani Stadium, Nairobi</span>
-                        </div>
-
-                        <i class="fas fa-trash-alt delete-meetup" onclick="deleteMeetup()"></i>
-                    </div>
-                </div>
-
-                <div class="meetup" id="meetup">
-                    <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F53234975%2F16420187315%2F1%2Foriginal.jpg?w=800&auto=compress&rect=0%2C0%2C1024%2C512&s=4f3d08e7eedb69a26b28b913d60cb029" alt="sd"  onclick="viewMeetup()">
-
-                    <div class="meetup-info">
-
-                        <div class="details">
-                            <p class="details-title" onclick="viewMeetup()">MEST Training Program</p>
-
-                            <span class="details-date">Mon 14th Jan, 7:00AM</span>
-
-                            <span class="details-venue">iHub, Nairobi, Kenya</span>
-                        </div>
-
-                        <i class="fas fa-trash-alt delete-meetup" onclick="deleteMeetup()"></i>
-                    </div>
-                </div>
-
-                <div class="meetup" id="meetup">
-                    <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F45274655%2F171167341493%2F1%2Foriginal.jpg?w=800&auto=compress&rect=0%2C710%2C1300%2C650&s=3b9a43ac5d361da05e724c4546d329f0" alt="sd"  onclick="viewMeetup()">
-
-                    <div class="meetup-info">
-
-                        <div class="details">
-                            <p class="details-title" onclick="viewMeetup()">Agriculture & Technology</p>
-
-                            <span class="details-date">Tue 15th Jan, 10:00AM</span>
-
-                            <span class="details-venue">KALRO HQ, Nairobi</span>
-                        </div>
-
-                        <i class="fas fa-trash-alt delete-meetup" onclick="deleteMeetup()"></i>
-                    </div>
-                </div>
-
-                <div class="meetup" id="meetup">
-                    <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F51664819%2F17720584821%2F1%2Foriginal.jpg?w=800&auto=compress&rect=0%2C482%2C4896%2C2448&s=0ea31edc0958a868c53e7a46046ddd05" alt="sd"  onclick="viewMeetup()">
-
-                    <div class="meetup-info">
-
-                        <div class="details">
-                            <p class="details-title" onclick="viewMeetup()">Effects of Plastic</p>
-
-                            <span class="details-date">Mon 25th Jan, 5:00PM</span>
-
-                            <span class="details-venue">EPZ Godown, Athi River, Nairobi</span>
-                        </div>
-
-                        <i class="fas fa-trash-alt delete-meetup" onclick="deleteMeetup()"></i>
-                    </div>
-                </div>
-
-                <div class="meetup" id="meetup">
-                    <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F53735354%2F239567664436%2F1%2Foriginal.20181209-090718?h=150&w=300&auto=compress&rect=180%2C0%2C1560%2C780&s=cf529bc183eddc591d316463d9226407" alt="sd"  onclick="viewMeetup()">
-
-                    <div class="meetup-info">
-
-                        <div class="details">
-                            <p class="details-title" onclick="viewMeetup()">Lights, Camera, Action</p>
-
-                            <span class="details-date">Thur 31st Jan, 7:00PM</span>
-
-                            <span class="details-venue">Hilton Hotel, Nairobi CBD</span>
-                        </div>
-
-                        <i class="fas fa-trash-alt delete-meetup" onclick="deleteMeetup()"></i>
-                    </div>
-                </div>
+            <div class="meetups" id="dash-meetups-list">
 
             </div>
+           
         </div>
 
         <div class="add-event-button" onclick="createMeetup()">
             <i class="fas fa-plus"></i>
         </div>
+
+        <script>
+            fetchDashboard()
+        </script>
         
     </body>
 
