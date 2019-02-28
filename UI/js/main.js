@@ -278,7 +278,7 @@ function fetchDashboard() {
                     const newMeetup = document.createElement('div');
                     newMeetup.classList.add('meetup');
                     newMeetup.id = meetup.id;
-                    newMeetup.addEventListener('click', () => { viewMeetup(meetup.id); });
+                    newMeetup.addEventListener('click', () => { viewMeetup(newMeetup.id); });
 
                     const details = `
                         <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F52898717%2F21809261606%2F1%2Foriginal.jpg?w=800&auto=compress&rect=0%2C19%2C1280%2C640&s=337936a5d54b58a232e00f63a3f643fc" alt="sd" onclick="viewMeetup()">
@@ -311,7 +311,9 @@ function fetchDashboard() {
 }
 
 function viewMeetup(id) {
-    console.log(`Meetup: ${id}`);
+    if (id !== undefined) {
+        console.log(`Meetup ID: ${id}`);
+    }
 }
 
 function meetups() {
@@ -322,8 +324,38 @@ function createMeetup() {
     window.location = 'create-meetup.html';
 }
 
+/**
+ * Function to delete meetup
+ */
 function deleteMeetup(id) {
-    console.log(`Meetup deleted! ${id}`);
+    if (id !== undefined) {
+        const modal = document.getElementById('modal');
+
+        modal.style.display = 'block';
+        document.getElementById('cancel').addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        document.getElementById('delete').addEventListener('click', () => {
+            fetch(`${ALL_MEETUPS_URL}/${id}`, {
+                method: 'DELETE',
+                headers: {
+                    Authorization: `Bearer ${localStorage.getItem('token')}`,
+                },
+            })
+            .then(res => res.json())
+            .then((data) => {
+                modal.style.display = 'none';
+
+                if (data.status === 200) {
+                    window.alert(data.message);
+                    window.location.reload();
+                } else {
+                    window.alert(data.message);
+                }
+            });
+        });
+    }
 }
 
 /**
