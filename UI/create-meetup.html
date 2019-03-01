@@ -49,42 +49,22 @@
             <span id="main-title">Create Meetup</span>
 
             <form action="">
-                <span id="subtitle">Title *</span>
-                <input type="text" name="title" id="title">
+                <span class="subtitle">Topic *</span>
+                <input type="text" name="topic" id="topic" required>
 
-                <span id="subtitle">Description *</span>
-                <textarea name="description" id="description" rows="5"></textarea>
+                <span class="subtitle">Description *</span>
+                <textarea name="description" id="description" rows="5" required></textarea>
 
-                <span id="subtitle">Organizer *</span>
-                <input type="text" name="title" id="title">
+                <span class="subtitle">Location *</span>
+                <input type="text" name="location" id="location" required>
 
-                <span id="subtitle">Location *</span>
-                <input type="text" name="title" id="title">
+                <span class="subtitle">Date *</span>
+                <input type="text" name="date" id="date" required>
 
-                <span id="subtitle">Address</span>
-                <input type="text" name="title" id="title">
+                <span class="subtitle">Tags *</span>
+                <input type="text" name="tags" id="tags" placeholder="E.g. Python, Flask..." required>
 
-                <div class="create-meetup-date">
-                    <div class="date">
-                        <span id="subtitle">Starts *</span>
-
-                        <div class="meetup-date">
-                            <input class="date-input" type="text" name="title" id="title" placeholder="dd/mm/yy">
-                            <input class="date-input" type="text" name="title" id="title" placeholder="hh:mm">
-                        </div>
-                    </div>
-
-                    <div class="date">
-                        <span id="subtitle">Ends *</span>
-
-                        <div class="meetup-date">
-                            <input class="date-input" type="text" name="title" id="title" placeholder="dd/mm/yy">
-                            <input class="date-input" type="text" name="title" id="title" placeholder="hh:mm">
-                        </div>
-                    </div>
-                </div>
-
-                <span id="subtitle">Poster *</span>
+                <span class="subtitle">Poster</span>
                 <div class="image-holder">
                     <div>
                         <i class="fas fa-file-image"></i>
