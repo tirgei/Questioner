@@ -49,11 +49,11 @@
             <div class="meetup-header">
                 <div class="header-details">
 
-                    <p>Flask: Python Reimagined</p>
+                    <p id="topic"></p>
 
                     <div class="meetup-host">
-                        <img src="https://pbs.twimg.com/profile_images/689851478706626561/yaVQgTCw_400x400.png" alt="Host">
-                        <span> <a href="#">Andela Kenya</a> </span>
+                        <img src="" alt="">
+                        <span> <a href="#"></a> </span>
                     </div>
                 </div>
 
@@ -76,11 +76,7 @@
 
                     <hr>
 
-                    <p class="description">
-                        Commodo veniam magna commodo et. Lorem reprehenderit magna esse eu elit. Ullamco in ea sint tempor eu reprehenderit qui sit est ad irure elit qui consequat. Duis id ex qui ad sit adipisicing.
-
-                        Ex qui incididunt cillum dolor mollit commodo duis minim commodo officia pariatur esse aliquip. Deserunt tempor eu aliquip aliqua incididunt cupidatat consequat incididunt sit duis enim labore proident qui. Do sint proident reprehenderit ullamco cillum eu excepteur ipsum. Elit dolor consequat esse velit aliqua irure dolor ad et. Sit sunt nisi Lorem non laborum aliqua fugiat aliquip exercitation minim in amet exercitation. Sit elit ex et aliqua voluptate enim culpa id officia irure.
-                    </p>
+                    <p class="description" id="description"></p>
 
                 </div>
 
@@ -88,16 +84,14 @@
                     <div class="extra-item time-item">
                         <i class="fas fa-calendar"></i>
                         <div class="time">
-                            <span>Monday, 7th January, 2019</span>
-                            <span>2:00PM - 7:00PM</span>
+                            <span id="date"></span>
                         </div>
                     </div>
 
                     <div class="extra-item venue-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <div class="venue">
-                            <span>Andela Kenya HQ</span>
-                            <span>Nairobi, Kenya</span>
+                            <span id="location"></span>
                         </div>
                     </div>
                     
@@ -302,6 +296,10 @@
 
             </div>
         </div>
+
+        <script>
+            fetchMeetupDetails();
+        </script>
 
     </body>
 

@@ -729,17 +729,12 @@ body {
     margin-left: 15px;
 }
 
-.extra-item div > span:first-child {
+.extra-item div > span {
     font-size: 15px;
     margin: 0;
     padding: 0;
 }
 
-.extra-item div > span:last-child {
-    color: #555454;
-    font-size: 13px;
-    margin-top: 5px;
-}
 
 .venue-item {
     margin-top: 20px;

@@ -22,7 +22,7 @@ You can view the website here: [Questioner](https://tirgei.github.io/Questioner/
 ## Additional features
 
 - [ ] Admin can add images to a meetup
-- [ ] Admin can add tags to a meetup
+- [X] Admin can add tags to a meetup
 
 ## Pre-requisites
 

@@ -158,7 +158,7 @@ function fetchUpcomingMeetups() {
                     const newMeetup = document.createElement('div');
                     newMeetup.classList.add('meetup');
                     newMeetup.id = meetup.id;
-                    newMeetup.addEventListener('click', viewMeetup(meetup.id));
+                    newMeetup.addEventListener('click', () => viewMeetup(meetup.id));
 
                     const date = meetupShortDate(meetup.happening_on);
 
@@ -218,7 +218,7 @@ function fetchAllMeetups() {
                     const newMeetup = document.createElement('div');
                     newMeetup.classList.add('meetup');
                     newMeetup.id = meetup.id;
-                    newMeetup.addEventListener('click', viewMeetup(meetup.id));
+                    newMeetup.addEventListener('click', () => viewMeetup(meetup.id));
 
                     const date = meetupShortDate(meetup.happening_on);
 
@@ -310,10 +310,45 @@ function fetchDashboard() {
     });
 }
 
+/**
+ * Function to redirect to the meetup details page
+ */
 function viewMeetup(id) {
     if (id !== undefined) {
-        console.log(`Meetup ID: ${id}`);
+        localStorage.setItem('selectedMeetup', id);
+        window.location.replace('meetup.html');
     }
+}
+
+/**
+ *  Function to fetch meetup details
+ */
+function fetchMeetupDetails() {
+    const id = localStorage.getItem('selectedMeetup');
+
+    if (!id || id === null) {
+        window.location.replace('index.html');
+    }
+
+    fetch(`${ALL_MEETUPS_URL}/${id}`, {
+        method: 'GET',
+    })
+    .then(res => res.json())
+    .then((data) => {
+        console.log(`Meetup: ${JSON.stringify(data)}`);
+
+        if (data.status === 200) {
+            const meetup = data.data;
+
+            document.getElementById('topic').innerHTML = meetup.topic;
+            document.getElementById('description').innerHTML = meetup.description;
+            document.getElementById('date').innerHTML = meetup.happening_on;
+            document.getElementById('location').innerHTML = meetup.location;
+        }
+    })
+    .catch((error) => {
+        console.log(`Error fetching upcoming meetups: ${error}`);
+    });
 }
 
 function meetups() {
@@ -413,6 +448,8 @@ document.addEventListener('readystatechange', (event) => {
         const logoutBtn = document.getElementById('logout');
 
         // Register event listeners
-        logoutBtn.addEventListener('click', logout);
+        if (logoutBtn) {
+            logoutBtn.addEventListener('click', logout);
+        }
     }
 });
