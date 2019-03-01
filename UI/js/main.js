@@ -359,6 +359,38 @@ function deleteMeetup(id) {
 }
 
 /**
+ * Function to create a new meetup
+ */
+function createNewMeetup() {
+    fetch(ALL_MEETUPS_URL, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${localStorage.getItem('token')}`,
+        },
+        body: JSON.stringify({
+            topic: document.getElementById('topic').value,
+            description: document.getElementById('description').value,
+            location: document.getElementById('location').value,
+            happening_on: document.getElementById('date').value,
+            tags: (document.getElementById('tags').value).split(','),
+        }),
+    })
+    .then(res => res.json())
+    .then((data) => {
+        if (data.status === 201) {
+            window.alert(data.message);
+            window.location.reload();
+        } else {
+            window.alert(data.message);
+        }
+    })
+    .catch((error) => {
+        console.log(`Error: ${error}`);
+    });
+}
+
+/**
  *  Function to format meetup happening date
  */
 function meetupShortDate(date) {
