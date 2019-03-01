@@ -1137,14 +1137,14 @@ body {
     flex-direction: column;
 }
 
-.create-meetup-container form #subtitle {
+.create-meetup-container form .subtitle {
     font-size: 18px;
     color: #444444;
     font-weight: bold;
     margin-top: 20px;
 }
 
-.create-meetup-container form > #subtitle:first-child {
+.create-meetup-container form > .subtitle:first-child {
     margin-top: 0;
 }
 
@@ -1235,7 +1235,7 @@ body {
 }
 
 #create-meetup-btn {
-    width: fit-content;
+    width: 100%;
     padding: 15px 100px;
     background-color: #0095ff;
     border: none;
@@ -1653,7 +1653,7 @@ body {
         padding: 10px;
     }
 
-    .create-meetup-container form #subtitle {
+    .create-meetup-container form .subtitle {
         font-size: 15px;
         margin-top: 10px;
     }
